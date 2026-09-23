@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>STREAM MAX — Download</title>
+
+  <title>STREAM MAX — Seu mundo em streaming</title>
+
   <style>
     * {
       box-sizing: border-box;
@@ -12,160 +14,284 @@
       padding: 0;
     }
 
-```
-body {
-  min-height: 100vh;
-  background: #050505;
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #102d52 0%, #05070b 38%, #020304 100%);
+      color: white;
+      min-height: 100vh;
+    }
 
-.container {
-  width: 100%;
-  max-width: 900px;
-  text-align: center;
-}
+    header {
+      width: 100%;
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(0,0,0,.35);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-.logo {
-  font-size: 42px;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
+    .brand {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
 
-.logo span {
-  color: #168cff;
-}
+    .brand span {
+      color: #1597ff;
+    }
 
-.slogan {
-  color: #aaa;
-  margin-bottom: 40px;
-  font-size: 16px;
-}
+    .status {
+      color: #78c8ff;
+      font-size: 13px;
+      border: 1px solid rgba(21,151,255,.35);
+      padding: 8px 13px;
+      border-radius: 30px;
+    }
 
-h1 {
-  font-size: 30px;
-  margin-bottom: 12px;
-}
+    .hero {
+      text-align: center;
+      padding: 85px 20px 55px;
+    }
 
-.subtitle {
-  color: #aaa;
-  margin-bottom: 30px;
-}
+    .crown {
+      font-size: 48px;
+      margin-bottom: 15px;
+      filter: drop-shadow(0 0 18px #168cff);
+    }
 
-.downloads {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
-}
+    .hero h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      font-weight: 900;
+      letter-spacing: -3px;
+      margin-bottom: 12px;
+    }
 
-.card {
-  background: #111;
-  border: 1px solid #252525;
-  border-radius: 16px;
-  padding: 25px 18px;
-}
+    .hero h1 span {
+      color: #168cff;
+      text-shadow: 0 0 30px rgba(22,140,255,.5);
+    }
 
-.icon {
-  font-size: 42px;
-  margin-bottom: 12px;
-}
+    .hero h2 {
+      font-size: clamp(18px, 3vw, 27px);
+      color: #d9e8f5;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
 
-.card h2 {
-  font-size: 20px;
-  margin-bottom: 8px;
-}
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #9ba8b5;
+      line-height: 1.7;
+    }
 
-.card p {
-  color: #999;
-  font-size: 14px;
-  min-height: 38px;
-  margin-bottom: 18px;
-}
+    .download-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 20px 70px;
+    }
 
-.button {
-  display: block;
-  width: 100%;
-  padding: 13px;
-  border-radius: 10px;
-  background: #168cff;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
+    .section-title {
+      text-align: center;
+      margin-bottom: 28px;
+    }
 
-.button:hover {
-  background: #006edc;
-}
+    .section-title h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
 
-footer {
-  margin-top: 35px;
-  color: #666;
-  font-size: 13px;
-}
-```
+    .section-title p {
+      color: #8e9aa7;
+    }
 
+    .devices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .device {
+      background: linear-gradient(145deg, rgba(20,25,32,.95), rgba(7,10,14,.95));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 20px;
+      padding: 27px 20px;
+      text-align: center;
+      transition: .25s;
+    }
+
+    .device:hover {
+      transform: translateY(-6px);
+      border-color: rgba(22,140,255,.7);
+      box-shadow: 0 10px 35px rgba(0,100,255,.15);
+    }
+
+    .device-icon {
+      font-size: 43px;
+      margin-bottom: 15px;
+    }
+
+    .device h4 {
+      font-size: 20px;
+      margin-bottom: 9px;
+    }
+
+    .device p {
+      color: #87929d;
+      min-height: 42px;
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .download-btn {
+      display: block;
+      text-decoration: none;
+      background: #168cff;
+      color: white;
+      padding: 13px;
+      border-radius: 11px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .download-btn:hover {
+      background: #0874d8;
+      box-shadow: 0 0 20px rgba(22,140,255,.35);
+    }
+
+    .info {
+      max-width: 850px;
+      margin: 0 auto 70px;
+      padding: 30px 25px;
+      text-align: center;
+      border-radius: 20px;
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.07);
+    }
+
+    .info h3 {
+      margin-bottom: 12px;
+    }
+
+    .info p {
+      color: #919ba5;
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      border-top: 1px solid rgba(255,255,255,.07);
+      color: #66717d;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px;
+      }
+
+      .status {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 60px;
+      }
+    }
   </style>
+
 </head>
 
 <body>
-  <main class="container">
+
+<header>
+  <div class="brand">STREAM <span>MAX</span></div>
+  <div class="status">● SITE OFICIAL</div>
+</header>
+
+<section class="hero">
+  <div class="crown">👑</div>
+
+  <h1>STREAM <span>MAX</span></h1>
+
+  <h2>SEU MUNDO EM STREAMING</h2>
+
+  <p>
+    Acesse o STREAM MAX no dispositivo que você usa.
+    Escolha uma opção abaixo para encontrar a versão apropriada.
+  </p>
+</section>
+
+<section class="download-section">
+
+  <div class="section-title">
+    <h3>Escolha seu dispositivo</h3>
+    <p>Selecione uma versão para continuar.</p>
+  </div>
+
+  <div class="devices">
 
 ```
-<div class="logo">STREAM <span>MAX</span></div>
-<div class="slogan">SEU MUNDO EM STREAMING</div>
+<div class="device">
+  <div class="device-icon">📱</div>
+  <h4>Android</h4>
+  <p>Para celulares e tablets Android.</p>
+  <a class="download-btn" href="#">BAIXAR APK</a>
+</div>
 
-<h1>Baixe o STREAM MAX</h1>
-<p class="subtitle">Escolha o dispositivo que você deseja usar.</p>
+<div class="device">
+  <div class="device-icon">💻</div>
+  <h4>Windows</h4>
+  <p>Aplicativo para computadores Windows.</p>
+  <a class="download-btn" href="#">BAIXAR PARA PC</a>
+</div>
 
-<section class="downloads">
+<div class="device">
+  <div class="device-icon">📺</div>
+  <h4>Smart TV</h4>
+  <p>Encontre a versão compatível com sua TV.</p>
+  <a class="download-btn" href="#">VER VERSÃO</a>
+</div>
 
-  <div class="card">
-    <div class="icon">📱</div>
-    <h2>Android</h2>
-    <p>Celulares e tablets Android.</p>
-    <a class="button" href="#">BAIXAR APK</a>
+<div class="device">
+  <div class="device-icon">📺</div>
+  <h4>TV Box</h4>
+  <p>Versão para dispositivos Android TV Box.</p>
+  <a class="download-btn" href="#">BAIXAR APK</a>
+</div>
+
+<div class="device">
+  <div class="device-icon">🍎</div>
+  <h4>iPhone / iPad</h4>
+  <p>Informações para dispositivos Apple.</p>
+  <a class="download-btn" href="#">VER OPÇÕES</a>
+</div>
+```
+
   </div>
+</section>
 
-  <div class="card">
-    <div class="icon">💻</div>
-    <h2>PC Windows</h2>
-    <p>Aplicativo para computador Windows.</p>
-    <a class="button" href="#">BAIXAR PARA PC</a>
-  </div>
+<section class="info">
+  <h3>STREAM MAX</h3>
 
-  <div class="card">
-    <div class="icon">📺</div>
-    <h2>Smart TV</h2>
-    <p>Escolha a versão compatível com sua televisão.</p>
-    <a class="button" href="#">VER VERSÕES</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">📺</div>
-    <h2>TV Box</h2>
-    <p>Versão Android para TV Box compatível.</p>
-    <a class="button" href="#">BAIXAR APK</a>
-  </div>
-
-  <div class="card">
-    <div class="icon">🍎</div>
-    <h2>iPhone / iPad</h2>
-    <p>Informações para dispositivos Apple.</p>
-    <a class="button" href="#">VER OPÇÕES</a>
-  </div>
-
+  <p>
+    Este é o portal oficial de acesso e download do STREAM MAX.
+    Escolha seu dispositivo acima para continuar.
+  </p>
 </section>
 
 <footer>
-  © 2026 STREAM MAX — Todos os direitos reservados.
+  © 2026 STREAM MAX — SEU MUNDO EM STREAMING
 </footer>
-```
 
-  </main>
 </body>
 </html>
